@@ -1,0 +1,10 @@
+create-pl
+save Metal-Rock.pl
+add /var/e850/Tracks/Metal-Rock/
+add /var/e850/Tracks/Rock-Metal/
+pl-create Metal-Rock
+pl-create Metal
+save Metal.pls
+save metal
+shuffle
+colorscheme green
