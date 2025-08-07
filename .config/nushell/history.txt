@@ -1,0 +1,427 @@
+yay nushell
+yazi
+sudo pacman -S starship
+micro config.nu
+lsd
+yy
+yazi
+help config env
+config nu --doc | nu-highlight | less -R
+ls | where size > 1GB
+ls | where size > 1024MB
+ps
+lsd
+ls
+cd /var/e850/
+cat packages.txt
+bat packages.txt
+cd /home
+cd zaddy
+ps | where status == Running
+cd /var/e850/
+lsd
+ls
+sudo pacman -Rns lsd
+cd /home/zaddy
+chsh -s /usr/bin/nu
+pacman -Ss zsh
+pacman -Qs zsh
+sudo pacman -Rns zsh zsh-syntax-highlighting zsh-autosuggestions
+fzf
+config nu
+nu.config-path
+micro config.nu
+micro ~/.config/nushell/config.nu
+nu config
+config nu
+micro ~/.config/nushell/config.nu
+ls ~/.config/nushell/
+micro ~/.config/nushell/env.nu
+config nu
+micro ~/.config/nushell/config.nu
+config nu
+micro ~/.config/nushell/env.nu
+env.config.buffer_editor = "micro" 
+$env.config.buffer_editor = "micro" 
+config nu
+nu config
+yy
+alsamixer
+exit
+yy
+micro ~/.zshrc
+config nu
+$env.config.buffer_editor = "micro" 
+config nu
+trash
+help find 10kb
+help --find 10kb
+help commands
+help commands | explore
+ls | sort-by size
+cd /var/e850/
+ls | sort-by size
+cd /home/zaddy
+$env.config | table -e | bat -p
+yay oh my posh
+config nu
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+sudo pacman -Syu
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
+cd /var/e850/
+starship preset jetpack -o ~/.config/starship.toml
+yay
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+cd /home/zaddy
+starship preset pure-preset -o ~/.config/starship.toml
+cd /home/zaddy
+cd /var/e850/
+cd /home/zaddy
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+cd /var/e850/
+cd /home/zaddy
+starship preset pure-preset -o ~/.config/starship.toml
+starship promopts
+starship promopt
+starship -h
+starship prompt
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+starship prompt
+starship preset pure-preset -o ~/.config/starship.toml
+yay
+btop
+cd ~/.dotfiles
+cp -r -f ~/.config ~/.dotfiles
+ls
+ls ~/.config/
+yy
+ls ~/.config/
+git init
+git -h
+git brach 
+git branch 
+ls ~/.dotfiles
+rm -rf .zsh
+ls ~/.dotfiles
+rm .zshrc
+ls ~/.dotfiles
+git add .
+git push
+cd /home/zaddy
+fzf .config/
+config nu
+cd /home/zaddy
+cd /var/e850/
+cd /home/zaddy
+journalctl -xe -no-pager
+journalctl -xe --no-pager
+let a = ()
+plugin list
+table --list
+yy
+nu config
+env.config.buffer_editor = "micro" 
+$env.config.buffer_editor = "micro" 
+nu config
+table --list
+ls ~/.dotfiles
+table --list
+ls ~/.dotfiles
+table --list
+ls ~/.dotfiles
+table --list
+ls ~/.dotfiles
+> keybindings list --modifiers
+keybindings list --modifiers
+keybindings list -e -d
+keybindings list -e -d -k
+keybindings list -e -d -k -d
+keybindings list -k -d -o
+Redo
+Clear
+clear
+redo
+keybindings list -k -d -o
+paste
+Paste
+clear
+> keybindings list
+keybindings list
+config nu
+micro ~/.config/hypr/hyrland.conf
+micro ~/.config/hypr/hyprland.conf
+cd /var/e850/
+ls | where type == file | where size > 10mb
+cd /home/zaddy
+ls | where type == steam | where size > 10mb
+ls | where type == ".*(steam).*" | first 10
+ls | where type == ~/.config | first 10
+ls | where name =~ ".*(alsa|pulse|pipewire).*" | first 10
+cd /usr/lib
+ls | where name =~ ".*(alsa|pulse|pipewire).*" | first 10
+cd /home/zaddy
+pacman -Si yazi | parse -r '(?P<name>.*\w) +: (?P<value>.+)'
+pacman -Si yazi
+pacman -Si just | lines | parse '{field} : {value}' | str trim
+micro ~/.config/rio/config
+ls ~/.config/rio/
+yy
+micro ~/.config/rio/config.toml
+journalctl -xe --no-pager
+^whoami 
+sudo pacman -Syu
+micro ~/.config/rio/config.toml
+clear
+htop
+journalctl -xe --no-pager
+ls ~/.config/rio/
+ls ~/.config/rio/themes
+nu list
+ls ~/.config/rio/
+micro ~/.config/rio/themes/Molokai.toml
+sudo pacman 
+yay firefox
+ls ~/.config/rio/
+micro /home/zaddy/.config/rio/themes/Oxocarbon.toml
+exit
+sudo pacman -Syu
+cc
+ls ~/.config/rio/
+sudo pacman -Syu
+clear
+exit
+micro ~/.config/rio/config.toml
+fzf
+journalctl -xe --no-pager
+waybar
+nmtui
+htop
+btop
+ls -h
+ls /var/e850
+dust /var/e850
+duf /var/e850
+duf /var/wd570
+duf /var/w570
+yy
+duf /var/s570
+dust /var/s570
+exit
+htop
+btop
+pacman -Qs font
+sudo pacman -Rns ttf-roboto
+pacman -Ql | rg ttf-meslo-nerd 
+rmpc
+pacman -Ql | rg ttf-meslo-nerd 
+yy
+fc-match -s "MesloLGS Nerd Font:style=Bold"
+pacman -Ql | rg ttf-meslo-nerd 
+yy
+pacman -Ql | rg ttf-meslo-nerd 
+micro ~/.config/rio/config.toml
+sudo pacman -Syu
+sudo pacman -S eza
+eza 
+ls
+sudo pacman -R eza
+pacman -Ss servo
+yay servo
+pacman -Ss zoxide
+sudo pacman -S zoxide
+sudo pacman -S eva
+eva
+eva -h
+eva -b 4 + 5 = 
+eva -b 4 + 5
+eva --help
+eva
+cloc
+pacman -Si xcp
+fd 
+ps
+pacman -Si rip
+sudo pacman -S bottom
+bottom
+bottom -h
+btm
+btm -h
+btm -T -c -n -g -u -e
+btop
+exit
+btm -T -c -n -g -u
+btm -b
+btm
+btm --theme gruvbox
+btm --theme nord
+btm
+htop
+sudo pacman -Rns bottom
+pacman -Si huniq
+pacman -Si helix
+sudo pacman -S helix
+z /var/e850/
+z var/e850/
+zoxide -h
+zoxide /var/e850
+zoxide init nushell | save -f ~/config/nushell/zoxide.nu
+zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
+nu config
+config nu
+z var/e850/
+z /var/e850/
+ls
+z /var/e850/
+sudo pacman -Rns helix
+sudo pacman -S lazygit
+lazygit
+z ~/.dotfiles
+lazygit
+fd starship
+fd
+ps
+z /home/zaddy/
+z foo
+sudo pacman -S ytop
+sudo pacman -S tealdeer
+tdlr pacman
+tldr bat
+tldr --update
+tldr bat
+tldr ps
+tldr btm
+tldr htop
+tldr ls
+tldr z
+z e850
+z home
+z zaddy
+z /home/zaddy/
+tldr journalctl
+journalctl --vacuume-time 1d
+journalctl --vacuum-time 1d
+tldr cp
+sudo pacman -S bandwhich
+bandwhich
+tldr bandwhich
+bandwhich
+sudo pacman -Rns bandwhich
+zq -l
+z -l
+tldr eva
+eva "(1 + 5) * 2 ^ 3"
+z e850
+pacman -Qe > Qe_packages.txt
+pacman -Qe Qe_packages.txt
+pacman -Qe /Qe_packages.txt
+pacman -Qe /packages.txt
+pacman -Qe > /var/e850/packages.txt
+pacman -Qe -p /var/e850/packages.txt
+pacman -Qe /var/e850/packages.txt
+tldr nushell
+tldr nu
+tldr rio
+tldr systemd
+tldr systemctl
+z home
+z zaddy
+z /home/zaddy/
+systemctl --failed
+systemctl status
+tldr systemctl
+systemctl list-units -t=service -s=enabled
+systemctl list-units -t service -s running
+systemctl list-units --type service --state running
+systemctl list-units-files --type service --state enabled
+systemctl list-unit-files --type service --state enabled
+tldr z
+z -l
+z -h
+z --help
+zoxide -h
+zoxide add /home/zaddy/
+z -l
+z e850
+z /home/zaddy/
+z ~/.config/
+z /home/zaddy/
+z config
+ls
+rm helix
+ls
+rm bottom
+rm -rf bottom
+ls
+exit
+pacman -Qs cursor
+hyprctl reload
+tldr hyprctl
+tldr hyprctl set 
+man hyprctl
+hyprctl set cursor capitaine-cursors 15
+micro ~/.config/hypr/hyprland.conf
+reboot
+yay brave
+hyprctl clients
+brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+hyprctl reload
+micro ~/.config/hypr/hyprland.conf
+yay zen
+sudo pacman -Rns firefox
+lsd
+ls
+yy
+ls
+trash
+pacman -Qem
+btop
+exit
+z e850
+fd asus
+fd config
+exit
+which brave
+micro ~/.config/hypr/hyprland.conf
+yay
+sudo pacman -Syu
+exit
+config nu
+z e850
+ls | sort-by size
+yy
+ls | sort-by size > 10 kb
+ls | sort-by size > 10kb
+ls | where size > 10kb
+ps
+tldr ps
+ps -u 
+ps -h
+ps 
+ps -h
+ps | sort-by mem | last 10
+watch -n 1 ps | sort-by mem | last 10
+watch n 1 ps | sort-by mem | last 10
+watch n1 ps | sort-by mem | last 10
+watch n1 | ps | sort-by mem | last 10
+watch n 1 | ps | sort-by mem | last 10
+ps | sort-by mem | last 10
+brave
+ps | sort-by mem | last 10
+brave
+ps | where status == Running
+ls first
+ls | first
+ls | reverse
+ls | get packages.txt
+ls | get Configs
+ls | get name
+help --find 10kb
+ls *.md
+ls *.steam
+z /home/zaddy/
+ls *.steam
+z e850
+z ..
+z e850
+z ...
+z /home/zaddy/

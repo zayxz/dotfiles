@@ -1,0 +1,64 @@
+add /var/e850/Music/Hard Rock Vibes
+add /var/e850/Music/Hard Rock Metal
+add /var/e850/Music/Rock Hits
+pl-create Hard Rock Vibes
+pl-create Hard Rock Metal
+pl-create Rock Hits
+add /var/e850/Music/Hard Rock
+pl-create Hard Rock
+add /var/e850/Music/Metal Hits
+pl-create Metal Hits
+create-pl Metal Hits
+clear
+set auto_hide_playlists_panel=false
+set progress_bar=line
+set progress_bar=color
+set progress_bar=shuttless
+set show_current_bitrate=true
+colorscheme green
+play-shuffle
+colorscheme amazon
+colorscheme dracula
+colorscheme spotify
+save
+set lib_sort=title albumartist album play_count
+set lib_sort=albumartist date album title play_count
+set lib_sort=albumartist date album discnumber title play_count
+set start_view=queue
+set start_view=qeue
+set start_view=que
+set start_view=treesss
+set shuffle=tracks
+set shuffle=trackssss
+set show_remaining_time=true
+set progress_bar=shuttle
+set progress_bar=bar
+set output_plugin=pipewire
+set lib_sort=albumartist date album discnumber tracknumber title play_count
+set ignore_duplicates=true
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}%{?bpm>0?at %{bpm} BPM }%{?stream?buf: %{buffer} }%{?show_current_bitrate & bitrate>=0? %{bitrate} kbps }%= %{?repeat_current?repeat current?%{?play_library?%{?playlist_mode!="all"?%{playlist_mode} from }%{?play_sorted?sorted }library?playlist}} | %{?volume>=0?%{?lvolume!=rvolume?%{lvolume}%% %{rvolume}?%{volume}}%% | }%1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set format_heading_album=%a - %l%= %{duration}
+set format_current= %a - %l%! - %t%=
+set dsp.alsa.device=
+set auto_hide_playlists_panel=true
+bind common <key> add
+fset missing-tag=!stream&(artist=""|album=""|title="")
+add /var/e850/Tracks/Metal
+add /var/e850/Tracks/Metal/
+pl-create Metal-Rock
+pl-create Metal
+create-pl Metal
+delete-pl
+help
+cmus --plugins
+colorscheme night
+colorscheme solarized-dark
+colorscheme zenburn
+colorscheme cyan
+create-pl
+save Metal-Rock.pl
+add /var/e850/Tracks/Metal-Rock/
+add /var/e850/Tracks/Rock-Metal/
+save Metal.pls
+save metal
+shuffle

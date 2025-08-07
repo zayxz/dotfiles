@@ -1,0 +1,24 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/blood_moon.toml",
+    "~/.config/alacritty/keybinds.toml"
+]
+
+[window]
+dimensions = { columns = 135, lines = 30}
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+
+[font]
+size = 10
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "SemiBold"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+
+
