@@ -1,0 +1,272 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    
+   "modules-center": [
+       "upower",
+       "idle_inhibitor",
+       "clock"
+    ],
+    "modules-right": [
+        "custom/playerctl",
+        "mpris",
+        "tray",
+        "memory",
+        "cpu",
+        "temperature",
+        "group/connections",
+        "pulseaudio",
+        "custom/power"
+    ],
+      "group/connections": {
+        "orientation": "inherit",
+        "drawer": {
+        "transition-duration": 400,
+        "children-class": "bluetooth",
+        "transition-left-to-right": true
+     },
+        "modules": [
+        "network",
+        "bluetooth",
+        "power-profiles-daemon"
+   	]
+   },  
+      
+    "hyprland/window": {
+    	"format": "{}",
+    	"max-length": 25,
+    	"separate-outputs": true,
+    	"offscreen-css": true,
+    	"offscreen-css-text": "(inactive)",
+    	"rewrite": {
+    		"(.*) — Mozilla Firefox": " $1",
+    		"(.*) - zsh": "> [$1]",
+    		"(.*) - $term": "> [$1]",
+    	},
+    },
+
+   "hyprland/workspaces": {
+	"active-only": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"show-special": false,
+    "persistent-workspaces": {
+      "*": 3
+	},
+	"format": "{icon}",
+	"format-icons": {
+            "active": "<span font='12'>󰮯</span>",
+            "empty": "<span font='8'></span>",
+            "default": "󰊠",
+	},
+  },
+    
+    "idle_inhibitor": {
+    	"tooltip": true,
+    	"tooltip-format-activated": "Idle_inhibitor active",
+    	"tooltip-format-deactivated": "Idle_inhibitor not active",
+    	"format": "{icon}",
+    	"format-icons": {
+    		"activated": " ",
+    		"deactivated": " ",
+    	}
+    },    
+        
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
+    },
+
+     "upower": {
+        "format": "{percentage}",
+        "native-path": "/org/bluez/hci0/dev_44_16_22_71_72_0C",
+        "icon-size": 20,
+        "show-icon": false,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 20
+   },
+    
+    "clock": {
+    	"interval": 1,
+        "format": " {:%H:%M:%S}", // 24H
+    	"format-alt": " {:%H:%M   %Y, %d %B, %A}",
+    	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+    	"calendar": {
+    		"mode": "year",
+    		"mode-mon-col": 3,
+    		"on-scroll": 1,
+    		"format": {
+    			"months": "<span color='#ffead3'><b>{}</b></span>",
+    			"days": "<span color='#ecc6d9'><b>{}</b></span>",
+    			"weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
+    			"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+    			"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+    		}
+    	}
+    },
+
+    "power-profiles-daemon": {
+      "format": "{icon} ",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "tooltip": true,
+        "format-muted": "  Muted",
+        "on-click-right": "rio --title-placeholder alsamixer -e  alsamixer ",
+        "on-scroll-up": "$HOME/.config/waybar/scripts/Volume.sh --inc",
+        "on-scroll-down": "$HOME/.config/waybar/scripts/Volume.sh --dec",
+        "on-click": "$HOME/.config/waybar/scripts/Volume.sh --toggle",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "default": ["","", "", ""]
+        }
+    },
+
+    "custom/power": {
+            "format" : "⏻ ",
+    		"tooltip": false,
+    		"menu": "on-click",
+    		"menu-file": "$HOME/.config/waybar/scripts/power_menu.xml", // Menu file in resources folder
+    		"menu-actions": {
+    			"shutdown": "systemctl -i poweroff",
+    			"reboot": "systemctl reboot",
+    			"suspend": "systemctl suspend",
+    			"logout": "hyprctl dispatch exit"
+    		}
+        },
+
+    "memory": {
+        "states": {
+            "c": 90, // critical
+            "h": 60, // high
+            "m": 30, // medium
+        },
+        "interval": 10,
+        "format": "󰾆 {used}GB",
+        "format-m": "󰾅 {used}GB",
+        "format-h": "󰓅 {used}GB",
+        "format-c": " {used}GB",
+        "format-alt": "󰾆 {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB",
+        "on-click-right": "rio --title-placeholder btm -e btm "
+        
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%",
+        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "temperature": {
+         "thermal-zone": 2,
+         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+         "interval": 10,
+         "tooltip": "true",
+         "tooltip-format": "CPU",
+         "critical-threshold": 80,
+         "format-critical": "{temperatureC}°C ",
+         "format": "{temperatureC}°C "
+},
+
+    "custom/playerctl": {
+          "tooltip": false,
+	      "format": "<span>{}</span>",
+          "return-type": "json",
+	      "max-length": 50,
+	      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+	      "on-click-middle": "playerctl play-pause",
+          "on-click": "playerctl previous",
+	      "on-click-right": "playerctl next",
+          "scroll-step": 5.0,
+	      "on-scroll-up": "$HOME/.config/waybar/scripts/Volume.sh --inc",
+	      "on-scroll-down": "$HOME/.config/waybar/scripts/Volume.sh --dec",
+	      "smooth-scrolling-threshold": 1,
+},
+
+    "mpris": {
+    	"interval": 10,
+    	"format": "{player_icon} ",
+    	"format-paused": "{status_icon} <i>{dynamic}</i>",
+    	"on-click-middle": "playerctl play-pause",
+    	"on-click": "playerctl previous",
+    	"on-click-right": "playerctl next",
+    	"scroll-step": 5.0,
+        "on-scroll-up": "$HOME/.config/waybar/scripts/Volume.sh --inc",
+        "on-scroll-down": "$HOME/.config/waybar/scripts/Volume.sh --dec",
+    	"smooth-scrolling-threshold": 1,
+    	"tooltip": true,
+    	"tooltip-format": "{status_icon} {dynamic}\nLeft Click: previous\nMid Click: Pause\nRight Click: Next",
+    	"player-icons": {
+    		"default": "",
+    		"firefox": "",
+    		"mopidy": "",
+    		"cmus": "",
+    		"rmpc": "",
+    		"mpd": "",
+    		"mpd-mpris": "",
+    		"mpv": "󰐹",
+    		"spotify": "",
+    		"vlc": "󰕼",
+    	},
+    	"status-icons": {
+    		"paused": "󰐎",
+    		"playing": "",
+    		"stopped": "",
+    	},
+    	"max-length": 30,
+    },
+
+    "bluetooth": {
+    	"format": " ",
+    	"format-disabled": "󰂳",
+    	"format-connected": "󰂱 {num_connections}",
+    	"tooltip-format": " {device_alias}",
+    	"tooltip-format-connected": "{device_enumerate}",
+    	"tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    	"tooltip": true,
+    	"on-click-right": "rio --title-placeholder bluetui -e bluetui",
+    },
+
+        "network": {
+        "tooltip": true,
+        "format-wifi": "  {essid}",
+        "format": "󰈀 ",
+   /*   "format-ethernet": "󰈀 ", */
+        "on-click-right": "rio --title-placeholder nmtui -e nmtui",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "interval": 2
+    },    
+   
+}

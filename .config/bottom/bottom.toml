@@ -1,0 +1,39 @@
+[flags]
+
+# Show memory values in the processes widget as values by default
+process_memory_as_value = true
+
+[styles]
+#theme = "gruvbox"
+
+[styles.cpu]
+all_entry_color = "#98ec65"
+avg_entry_color = "#ff5555"
+cpu_core_colors = ["#cebbff", "#ffd966", "#bbecff", "#b6f292", "#33bbff", "#88ddff", "#98ec65", "#00aaff"]
+
+[styles.memory]
+ram_color = "#aa88ff"
+cache_color = "#ffd966"
+swap_color = "#ffd966"
+arc_color = "#bbecff"
+gpu_colors = ["#33bbff", "#ff8888", "#88ddff", "#98ec65", "#00aaff", "#ff5555"]
+
+[styles.network]
+rx_color = "#aa88ff"
+tx_color = "#ffd966"
+rx_total_color = "#cebbff"
+tx_total_color = "#ffd966"
+
+[styles.tables]
+headers = {color = "#33bbff", bold = true}
+
+[styles.graphs]
+graph_color = "#cccccc"
+legend_text = {color = "#777777"}
+
+[styles.widgets]
+border_color = "#cccccc"
+selected_border_color = "#fcdc08"
+widget_title = {color = "#777777"}
+text = {color = "#98ec65"}
+selected_text = {color = "black", bg_color = "#fcdc08"}
