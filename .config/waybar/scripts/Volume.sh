@@ -58,3 +58,6 @@ elif [[ "$1" == "--toggle" ]]; then
 else
     get_volume
 fi
+
+# Play Sound on Volume Change
+paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
