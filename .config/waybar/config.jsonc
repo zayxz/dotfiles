@@ -133,7 +133,7 @@
         "format": "{icon}  {volume}%",
         "tooltip": true,
         "format-muted": "  Muted",
-        "on-click-right": "rio --title-placeholder alsamixer -e  alsamixer ",
+        "on-click-right": "rio --title-placeholder pulsemixer -e  pulsemixer ",
         "on-scroll-up": "$HOME/.config/waybar/scripts/Volume.sh --inc",
         "on-scroll-down": "$HOME/.config/waybar/scripts/Volume.sh --dec",
         "on-click": "$HOME/.config/waybar/scripts/Volume.sh --toggle",

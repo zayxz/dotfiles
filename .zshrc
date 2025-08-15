@@ -20,25 +20,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Clean Trash
-function trash() {
-    local TRASH_DIR="$HOME/.local/share/Trash"
-    if [ -z "$(ls -A "$TRASH_DIR")" ]; then
-        echo "Empty."
-    else
-        echo "Removing trash:"
-        ls "$TRASH_DIR"
-        echo -n "Proceed (y/n): "
-        read confirm
-        if [[ "$confirm" == "y" ]]; then
-            rm -rf "$TRASH_DIR"/*
-            echo "Trash removed."
-        else
-            echo "Aborted."
-        fi
-    fi
-}
-
 # Alias
 alias yy="yazi"
 alias mpdr="systemctl --user restart mpd"
@@ -47,3 +28,4 @@ alias ls="eza -l --icons --no-user --no-time --no-filesize"
 alias speed="speedtest-cli --secure --bytes"
 alias bat="bat --theme base16-256 -s"
 alias dust="dust -P -b"
+alias trash="rm -rf $HOME/.local/share/Trash/*"
